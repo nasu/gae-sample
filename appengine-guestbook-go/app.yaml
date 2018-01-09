@@ -1,8 +1,12 @@
 runtime: go
 api_version: go1
 
-nobuild_files: vendor/.*$
-skip_files: vendor/.*$
+nobuild_files:
+    - vendor
+    - gopath
+skip_files:
+    - vendor/.*$
+    - gopath/.*$
 handlers:
 - url: /.*
   script: _go_app
